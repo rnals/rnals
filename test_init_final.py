@@ -1411,6 +1411,7 @@ while True:
 			################ 예상 보스 타임 입력 ################ 
 
 				if message.content.startswith(bossData[i][0] +'예상'):
+					await client.get_channel(channel).send('<' + bossData[i][0] + ' 삭제완료>', tts=False)
 					if hello.find('  ') != -1 :
 						bossData[i][6] = hello[hello.find('  ')+2:]
 						hello = hello[:hello.find('  ')]
@@ -1451,7 +1452,7 @@ while True:
 								)
 						await client.get_channel(channel).send(embed=embed, tts=False, delete_after=10)
 					else:
-						await client.get_channel(channel).send('```' + bossData[i][0] +' 예상 시간을 입력해주세요.```', tts=False)
+						await client.get_channel(channel).send('```' + bossData[i][0] +' 예상 시간을 입력해주세요.```', tts=False, delete_after=10)
 						
 				################ 보스타임 삭제 ################
 					
@@ -1466,7 +1467,7 @@ while True:
 					bossFlag0[i] = (False)
 					bossMungFlag[i] = (False)
 					bossMungCnt[i] = 0
-					await client.get_channel(channel).send('<' + bossData[i][0] + ' 삭제완료>', tts=False, delete_after=10)
+					await client.get_channel(channel).send('<' + bossData[i][0] + ' 삭제완료>', tts=False)
 					await dbSave()
 					print ('<' + bossData[i][0] + ' 삭제완료>')
 				
