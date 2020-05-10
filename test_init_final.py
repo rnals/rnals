@@ -1452,7 +1452,7 @@ while True:
 								)
 						await client.get_channel(channel).send(embed=embed, tts=False, delete_after=10)
 					else:
-						await client.get_channel(channel).send('```' + bossData[i][0] +' 예상 시간을 입력해주세요.```', tts=False, delete_after=10)
+						await client.get_channel(channel).send('```' + bossData[i][0] +' 예상 시간을 입력해주세요.```', tts=False)
 						
 				################ 보스타임 삭제 ################
 					
