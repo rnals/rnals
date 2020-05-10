@@ -2391,6 +2391,7 @@ while True:
 						await client.get_channel(channel).send( '```킬 목록에 등록되어 있지 않습니다!\n```', tts=False)
 				else:
 					await client.get_channel(channel).send( '```제대로 된 아이디를 입력해주세요!\n```', tts=False)
+			await msg.delete()
 
 	client.loop.create_task(task())
 	try:
