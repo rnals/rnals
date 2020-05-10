@@ -591,7 +591,7 @@ async def task():
 										description= '```다음 ' + bossData[i][0] + ' ' + bossTimeString[i] + '입니다.```',
 										color=0xff0000
 										)
-									await client.get_channel(channel).send(embed=embed, tts=False)
+									await client.get_channel(channel).send(embed=embed, tts=False, delete_after=10)
 									await PlaySound(voice_client1, './sound/' + bossData[i][0] + '미입력.mp3')
 								################ 멍 보스 ################
 								else :
