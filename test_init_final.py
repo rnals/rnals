@@ -1411,7 +1411,7 @@ while True:
 			################ 예상 보스 타임 입력 ################ 
 
 				if message.content.startswith(bossData[i][0] +'예상'):
-					await client.get_channel(channel).send('<' + bossData[i][0] + ' 삭제완료>', tts=False)
+					await client.get_channel(channel).send('<' + bossData[i][0] + ' 예상 입력완료>', tts=False)
 					if hello.find('  ') != -1 :
 						bossData[i][6] = hello[hello.find('  ')+2:]
 						hello = hello[:hello.find('  ')]
