@@ -2249,7 +2249,7 @@ while True:
 			################ 명존쎄 ################ 
 
 			if message.content == command[7]:
-				await client.get_channel(channel).send( '< 야옹이 명치 맞고 숨 고르기 중! 잠시만여! >', tts=False)
+				await client.get_channel(channel).send( '< 보스탐알리미 명치 맞고 숨 고르기 중! 잠시만여! >', tts=False)
 				for i in range(bossNum):
 					if bossMungFlag[i] == True:
 						bossTimeString[i] = tmp_bossTime[i].strftime('%H:%M:%S')
